@@ -1,0 +1,22 @@
+[app]
+  batch_size = 20 # number of items to send in clickhouse
+  log_path = "/var/log/nginx-to-clickhouse.log"
+
+[clickhouse]
+  [clickhouse.connection]
+    host = "host"
+    port = 0
+    database = "db"
+    table = "nginx_table"
+  [clickhouse.credentials]
+    user = "user"
+    password = "password"
+
+[nginx]
+  warn_count = 500 # number of parsing errors before warn message send
+  log_path = "/var/log/nginx/access/log"
+
+[notifications]
+  [notifications.telegram]
+    bot_token = "atata" # string
+    chat_id = "bgg" # string
