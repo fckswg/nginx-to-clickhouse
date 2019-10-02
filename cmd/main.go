@@ -11,9 +11,6 @@ import (
 )
 
 var warn int
-var auth *config.AuthRequest
-var reg *config.RegRequest
-var restore *config.RestoreRequest
 
 func main() {
 
