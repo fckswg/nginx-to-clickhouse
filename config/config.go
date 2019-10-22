@@ -42,29 +42,6 @@ type Config struct {
 	} `mapstructure:"notifications"`
 }
 
-type RegRequest struct {
-	Ap               string `json:"ap"`
-	Email            string `json:"email"`
-	Password1        string `json:"password1"`
-	Password2        string `json:"password2"`
-	AcceptGDPR       string `json:"accept_GDPR"`
-	AccountDirection string `json:"account_direction"`
-	Location         string `json:"location"`
-	Params           struct {
-		UtmSource string `json:"utm_source"`
-	} `json:"params"`
-}
-
-type AuthRequest struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
-}
-
-type RestoreRequest struct {
-	Password        string `json:"password"`
-	PasswordConfirm string `json:"passwordConfirm"`
-	Hash            string `json:"hash"`
-}
 
 func init() {
 	flag.StringVar(&confPath, "config_directory", "/etc/nginx-clickhouse/", "Config path.")
